@@ -8,6 +8,7 @@ public class BackendInstance extends Thread
 {
     private RequestRegistry requestRegistry;
     private APIConnection apiConnection;
+    private Database user;
 
     public BackendInstance()
     {
@@ -19,13 +20,30 @@ public class BackendInstance extends Thread
             @Override
             public String getRequest()
             {
-                return "test";
+                return "login ";
             }
 
             @Override
             public String respond(List<String> args)
             {
                 return "hello world";
+            }
+        });
+
+        requestRegistry.register(new Request()
+        {
+            @Override
+            public String getRequest()
+            {
+                return "get oauthtoken #string(username) #int(hashodePw)";
+            }
+
+            @Override
+            public String respond(List<String> args)
+            {
+
+
+                return "";
             }
         });
     }

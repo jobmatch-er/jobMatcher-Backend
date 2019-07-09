@@ -18,7 +18,7 @@ public class FormatUtil
 
     public static boolean isText(String string)
     {
-        if(!isNumeric(string))
+        if(!isNumeric(string) && !isBoolean(string))
         {
             return true;
         }

@@ -32,6 +32,11 @@ public class BackendInstance extends Thread
 
     public void run()
     {
+        this.apiConnection.start();
 
+        while(true)
+        {
+
+        }
     }
 }

@@ -7,14 +7,18 @@ import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
 
+import java.net.InetSocketAddress;
+
 public class APIConnection extends WebSocketServer
 {
     private WebSocket apiConnection;
     private boolean connected = false;
     private RequestRegistry requestRegistry;
 
-    public APIConnection(RequestRegistry requestRegistry)
+    public APIConnection(RequestRegistry requestRegistry, int port)
     {
+        super(new InetSocketAddress(port));
+
         this.requestRegistry = requestRegistry;
     }
 

@@ -17,6 +17,7 @@ public class BackendInstance extends Thread
     {
         this.requestRegistry = new RequestRegistry();
         this.apiConnection = new APIConnection(requestRegistry, 54345);
+        this.database = new Database("Praktikumsql1", "ldXwbcmrJg", "v22018085331772527.happysrv.de");
 
         requestRegistry.register(new Request()
         {
@@ -29,7 +30,7 @@ public class BackendInstance extends Thread
             @Override
             public String respond(List<String> args)
             {
-                String query = args.get(1).replaceAll("_/", " ");
+                String query = new String(args.get(1).replaceAll("_/", " "));
 
                 ResultSet resultSet = database.executeQuery(query);
 
@@ -37,11 +38,11 @@ public class BackendInstance extends Thread
                 {
                     if(!resultSet.first())
                     {
-                        return args.get(0) + " query ";
+                        return args.get(0) + " query {}";
                     }
                     else
                     {
-                        return args.get(0) + " query " + ResultSetConverter.convert(resultSet);
+                        return args.get(0) + " query " + ResultSetConverter.convert(resultSet).toString();
                     }
                 }
                 catch(SQLException e)
@@ -52,23 +53,6 @@ public class BackendInstance extends Thread
                 }
             }
         });
-
-        requestRegistry.register(new Request()
-        {
-            @Override
-            public String getRequest()
-            {
-                return "get oauthtoken #string(username) #int(hashodePw)";
-            }
-
-            @Override
-            public String respond(List<String> args)
-            {
-                return "";
-            }
-        });
-
-        database = new Database("Praktikumsql1", "ldXwbcmrJg", "v22018085331772527.happysrv.de");
     }
 
     public void run()

@@ -44,11 +44,11 @@ public class RequestRegistry
 
                 for(int i = 0; i < inputedRequestSplit.length; i++)
                 {
-                    if(inputedRequestSplit[i].equalsIgnoreCase(thisRequestSplit[i]))
+                    if(thisRequestSplit[i].equalsIgnoreCase(inputedRequestSplit[i]))
                     {
                         continue;
                     }
-                    else if(inputedRequestSplit[i].startsWith("#int"))
+                    else if(thisRequestSplit[i].startsWith("#int"))
                     {
                         if(FormatUtil.isNumeric(inputedRequestSplit[i]))
                         {
@@ -61,7 +61,7 @@ public class RequestRegistry
                             return "Required argument at '" + i + "' has to be a number! -> " + thisRequest.getRequest();
                         }
                     }
-                    else if(inputedRequestSplit[i].startsWith("#string"))
+                    else if(thisRequestSplit[i].startsWith("#string"))
                     {
                         if(FormatUtil.isText(inputedRequestSplit[i]))
                         {
@@ -74,7 +74,7 @@ public class RequestRegistry
                             return "Required argument at '" + i + "' has to be text! -> " + thisRequest.getRequest();
                         }
                     }
-                    else if(inputedRequestSplit[i].startsWith("#boolean"))
+                    else if(thisRequestSplit[i].startsWith("#boolean"))
                     {
                         if(FormatUtil.isBoolean(inputedRequestSplit[i]))
                         {

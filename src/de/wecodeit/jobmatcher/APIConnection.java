@@ -59,7 +59,7 @@ public class APIConnection extends WebSocketServer
 
         webSocket.send(respond);
 
-        Log.print("Connection", "Handled request '" + s + "' and responded with '" + respond + "'");
+        Log.print("Connection", "Handled request '" + s.replaceAll("_/", " ") + "' and responded with '" + respond + "'");
     }
 
     @Override

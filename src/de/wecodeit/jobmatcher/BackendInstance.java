@@ -3,7 +3,6 @@ package de.wecodeit.jobmatcher;
 import de.jakobniklas.util.Exceptions;
 import de.wecodeit.jobmatcher.registry.RequestRegistry;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -30,20 +29,9 @@ public class BackendInstance extends Thread
             @Override
             public String respond(List<String> args)
             {
-                String query = new String(args.get(1).replaceAll("_/", " "));
-
-                ResultSet resultSet = database.executeQuery(query);
-
                 try
                 {
-                    if(!resultSet.first())
-                    {
-                        return args.get(0) + " query {}";
-                    }
-                    else
-                    {
-                        return args.get(0) + " query " + ResultSetConverter.convert(resultSet).toString();
-                    }
+                    return args.get(0) + " query " + ResultSetConverter.convert(database.executeQuery(args.get(1).replaceAll("_/", " "))).toString();
                 }
                 catch(SQLException e)
                 {

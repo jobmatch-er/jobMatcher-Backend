@@ -1,5 +1,7 @@
 package de.jakobniklas.util;
 
+import java.nio.charset.StandardCharsets;
+
 public class FormatUtil
 {
     public static boolean isNumeric(String string)
@@ -40,18 +42,8 @@ public class FormatUtil
         }
     }
 
-    public static String convertToUTF8(String s)
+    public static String normalizeString(String input)
     {
-        String out = null;
-        try
-        {
-            out = new String(s.getBytes("UTF-8"), "ISO-8859-1");
-        }
-        catch(java.io.UnsupportedEncodingException e)
-        {
-            return null;
-        }
-
-        return out;
+        return new String(input.getBytes(StandardCharsets.UTF_8));
     }
 }

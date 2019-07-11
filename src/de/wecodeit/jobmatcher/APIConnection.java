@@ -6,6 +6,7 @@ import de.wecodeit.jobmatcher.registry.RequestRegistry;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
+import org.json.JSONObject;
 
 import java.net.InetSocketAddress;
 
@@ -56,8 +57,8 @@ public class APIConnection extends WebSocketServer
     @Override
     public void onMessage(WebSocket webSocket, String s)
     {
-        String message = s.substring("{\"data\":\"".length(), s.indexOf("\",\"puid\":\""));
-        String puid = s.substring(s.indexOf("\",\"puid\":\"") + "\",\"puid\":\"".length(), s.length() - 2);
+        String message = new JSONObject(s).getString("data");
+        String puid = new JSONObject(s).getString("puid");
         String respond = requestRegistry.handle(message + " " + puid);
 
         webSocket.send(respond);

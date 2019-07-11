@@ -43,7 +43,7 @@ public class BackendInstance extends Thread
                     Exceptions.handle(e);
                 }
 
-                return "{\"data\": " + queryResult + ", \"puid\": \"" + args.get(1) + "\"}";
+                return new JSONObject().put("data", queryResult).put("puid", args.get(1)).toString();
             }
         });
 
@@ -70,7 +70,7 @@ public class BackendInstance extends Thread
                     Exceptions.handle(e);
                 }
 
-                return null;
+                return new JSONObject().put("data", "null").put("puid", args.get(1)).toString();
             }
         });
 
@@ -87,7 +87,7 @@ public class BackendInstance extends Thread
             {
                 database.execute(args.get(0).replaceAll("_/", " "));
 
-                return "{\"data\": " + "null" + ", \"puid\": \"" + args.get(1) + "\"}";
+                return new JSONObject().put("data", "null").put("puid", args.get(1)).toString();
             }
         });
     }

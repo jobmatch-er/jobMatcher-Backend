@@ -1,6 +1,7 @@
 package de.wecodeit.jobmatcher;
 
 import de.jakobniklas.util.Exceptions;
+import de.jakobniklas.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,8 +38,10 @@ public class Matcher
                 Exceptions.handle(e);
             }
 
-            URL getNearByCitiesURL = new URL("http://geodb-free-service.wirefreethought.com/v1/geo/cities/" + cityLocationCode + "/nearbyCities?limit=7&offset=0&radius=" + userToBeMatchedWith.getInt("workarea"));
+            URL getNearByCitiesURL = new URL("http://geodb-free-service.wirefreethought.com/v1/geo/cities/" + cityLocationCode + "/nearbyCities?limit=7&offset=0&radius=" + userToBeMatchedWith.getInt("workradius"));
             String getNearByCitiesResponse = "";
+
+            Log.print(getNearByCitiesURL.toString());
 
             try(BufferedReader reader = new BufferedReader(new InputStreamReader(getNearByCitiesURL.openStream(), "UTF-8")))
             {

@@ -54,7 +54,7 @@ public class Log
      * @see #getLogFormat()
      * @see #setLogFormat(String)
      */
-    private static String logFormat = "[#date; #time; #milliseconds] | #thread | #prefix #logpointer #message (#class)";
+    private static String logFormat = "[#date; #time; #milliseconds] #prefix #logpointer #message (#class)";
     /**
      * internal value which controls spacing in logging
      */

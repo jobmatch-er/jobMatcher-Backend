@@ -7,7 +7,7 @@ public class Main
     public static void main(String[] args)
     {
         Log.print("Meme", "skateMINZIG skateTACO");
-        Log.print("JobMatch.er - Backend", "Started");
+        Log.print("JobMatch.er", "Started");
 
         System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "off");
 

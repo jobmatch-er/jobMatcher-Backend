@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BackendInstance extends Thread
@@ -43,7 +44,7 @@ public class BackendInstance extends Thread
                     Exceptions.handle(e);
                 }
 
-                return new JSONObject().put("data", queryResult).put("puid", args.get(1)).toString();
+                return "{\"data\": " + queryResult + ", \"puid\": \"" + args.get(1) + "\"}";
             }
         });
 
@@ -58,12 +59,55 @@ public class BackendInstance extends Thread
             @Override
             public String respond(List<String> args)
             {
+                List<String> matchingNewerIsMoreAccurate = new ArrayList<>();
+                List<Employer> foundEmployers = new ArrayList<>();
+
                 try
                 {
-                    JSONObject userToBeMatchedWith = ResultSetConverter.convert(database.executeQuery("SELECT * FROM `user` WHERE `email` = " + args.get(0) + "")).getJSONObject(0);
+                    //get user from db
+                    JSONObject userToBeMatchedWith = ResultSetConverter.convert(database.executeQuery("SELECT * FROM `user` WHERE `email` = " + args.get(0))).getJSONObject(0);
+
+                    //get cities near users city
                     JSONArray nearCities = Matcher.getNearCities(userToBeMatchedWith, database);
 
+                    //for cities near user
+                    for(int i = 0; i < nearCities.length(); i++)
+                    {
+                        //get all employers in the near city as JSONArray
+                        String matchingCityEmployersStr = ResultSetConverter.convert(database.executeQuery("SELECT * FROM user WHERE city = '" + nearCities.getJSONObject(i).getString("name") + "' AND employerdata > 0")).toString();
+                        JSONArray matchingCityEmployers = new JSONArray(matchingCityEmployersStr);
 
+                        //for each employer in that city
+                        for(int j = 0; j < matchingCityEmployers.length(); j++)
+                        {
+                            //add every possible employer to list
+                            foundEmployers.add(new Employer(matchingCityEmployers.getJSONObject(j).toString()));
+
+                            //check if the offered job matches the workarea of the user
+                            if(matchingCityEmployers.getJSONObject(i).getInt("workarea") == userToBeMatchedWith.getInt("workarea"))
+                            {
+                                //increase employers score
+                                foundEmployers.get(j).addToScore(10);
+
+                                //chips of user and employer
+                                JSONArray userChips = userToBeMatchedWith.getJSONArray("chips");
+                                JSONArray employerchips = matchingCityEmployers.getJSONObject(i).getJSONArray("chips");
+
+                                //for each userchip
+                                for(int k = 0; k < userChips.length(); k++)
+                                {
+                                    //for employerchips
+                                    for(int l = 0; l < employerchips.length(); l++)
+                                    {
+                                        if(userChips.getJSONObject(k).getString("name").equals(employerchips.getJSONObject(l).getString("name")))
+                                        {
+                                            foundEmployers.get(j).addToScore(1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 catch(SQLException e)
                 {

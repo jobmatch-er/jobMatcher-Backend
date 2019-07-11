@@ -33,6 +33,7 @@ public class APIConnection extends WebSocketServer
             Log.print("Connection", "A connection was successfully established");
 
             connected = true;
+
         }
         else
         {
@@ -55,11 +56,13 @@ public class APIConnection extends WebSocketServer
     @Override
     public void onMessage(WebSocket webSocket, String s)
     {
-        String respond = requestRegistry.handle(s);
+        String message = s.substring("{\"data\":\"".length(), s.indexOf("\",\"puid\":\""));
+        String puid = s.substring(s.indexOf("\",\"puid\":\"") + "\",\"puid\":\"".length(), s.length() - 2);
+        String respond = requestRegistry.handle(message + " " + puid);
 
         webSocket.send(respond);
 
-        Log.print("Connection", "Handled request '" + s.replaceAll("_/", " ") + "' and responded with '" + respond + "'");
+        Log.print("Connection", "Handled request '" + message.replaceAll("_/", " ") + "' and responded with '" + respond + "'");
     }
 
     @Override

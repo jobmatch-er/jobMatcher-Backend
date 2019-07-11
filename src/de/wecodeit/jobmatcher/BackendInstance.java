@@ -2,6 +2,8 @@ package de.wecodeit.jobmatcher;
 
 import de.jakobniklas.util.Exceptions;
 import de.wecodeit.jobmatcher.registry.RequestRegistry;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -23,7 +25,34 @@ public class BackendInstance extends Thread
             @Override
             public String getRequest()
             {
-                return "#int(respond_id) query #string(querry)";
+                return "query #string(querry) #string(puid)";
+            }
+
+            @Override
+            public String respond(List<String> args)
+            {
+                String queryResult = null;
+
+                try
+                {
+                    queryResult = ResultSetConverter.convert(database.executeQuery(args.get(0).replaceAll("_/", " "))).toString();
+                    queryResult = queryResult.substring(1).substring(0, queryResult.length() - 2);
+                }
+                catch(SQLException e)
+                {
+                    Exceptions.handle(e);
+                }
+
+                return "{\"data\": " + queryResult + ", \"puid\": \"" + args.get(1) + "\"}";
+            }
+        });
+
+        requestRegistry.register(new Request()
+        {
+            @Override
+            public String getRequest()
+            {
+                return "match #string(username) #string(puid)";
             }
 
             @Override
@@ -31,14 +60,34 @@ public class BackendInstance extends Thread
             {
                 try
                 {
-                    return args.get(0) + " query " + ResultSetConverter.convert(database.executeQuery(args.get(1).replaceAll("_/", " "))).toString();
+                    JSONObject userToBeMatchedWith = ResultSetConverter.convert(database.executeQuery("SELECT * FROM `user` WHERE `email` = " + args.get(0) + "")).getJSONObject(0);
+                    JSONArray nearCities = Matcher.getNearCities(userToBeMatchedWith, database);
+
+
                 }
                 catch(SQLException e)
                 {
                     Exceptions.handle(e);
-
-                    return args.get(0) + " internalerror";
                 }
+
+                return null;
+            }
+        });
+
+        requestRegistry.register(new Request()
+        {
+            @Override
+            public String getRequest()
+            {
+                return "command #string(sql) #string(puid)";
+            }
+
+            @Override
+            public String respond(List<String> args)
+            {
+                database.execute(args.get(0).replaceAll("_/", " "));
+
+                return "{\"data\": " + "null" + ", \"puid\": \"" + args.get(1) + "\"}";
             }
         });
     }

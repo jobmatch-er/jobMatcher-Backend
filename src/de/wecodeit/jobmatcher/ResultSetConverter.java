@@ -20,6 +20,8 @@ public class ResultSetConverter
             int numColumns = rsmd.getColumnCount();
             JSONObject obj = new JSONObject();
 
+            obj.put("userid", rs.getRow());
+
             for(int i = 1; i < numColumns + 1; i++)
             {
                 String column_name = rsmd.getColumnName(i);

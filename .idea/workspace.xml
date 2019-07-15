@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Database.java" description="try" line="17" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bed91f7c-ae55-4843-ba8c-86dbf49f04b4" name="Default Changelist" comment="Added booleancheck to isText in FormatUtil&#10;                                                                                                                                                                                                                                          &#10;                                                                                                                                                                                                                                          Added API Connection which processes responses using the given requestRegistry">
+      <change afterPath="$PROJECT_DIR$/.idea/jobMatcher-Backend.iml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/BackendInstance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1170">
+              <caret line="84" column="65" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+              <folding>
+                <element signature="e#1781#1782#0" expanded="true" />
+                <element signature="e#1859#1860#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Database.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Matcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Employer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/APIConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/registry/RequestRegistry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/FormatUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/TimeUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="docComment;method#format#0;class#TimeUtil#0" expanded="true" />
+                <element signature="docComment;method#getDate#0;class#TimeUtil#0" expanded="true" />
+                <element signature="e#1035#1036#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="docComment;method#getTime#0;class#TimeUtil#0" expanded="true" />
+                <element signature="e#1308#1309#0" expanded="true" />
+                <element signature="e#1349#1350#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/ExitUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>response</find>
+      <find>res</find>
+      <find>OK</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Jakob-Niklas See" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Response.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/Queue.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/ThreadUtil.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/TimeUtil.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/JobMatcherException.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/ExitUtil.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/Exceptions.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/actions/Action.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/registry/ResponseRegistry.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Request.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/registry/RequestRegistry.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/JSON.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/ResultSetExtractor.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/StreamingJsonResultSetExtractor.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/FormatUtil.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/ResultSetConverter.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/APIConnection.java" />
+        <option value="$PROJECT_DIR$/src/de/jakobniklas/util/Log.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Main.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Employer.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Matcher.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/BackendInstance.java" />
+        <option value="$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Database.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="960" />
+    <option name="height" value="1113" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jobMatcher-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jobMatcher-Backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jobMatcher-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jobMatcher-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jobMatcher-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jobMatcher-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jobMatcher-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jobMatcher-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="de" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jobMatcher-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jobMatcher-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="de" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jobMatcher-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jobMatcher-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="de" type="462c0819:PsiDirectoryNode" />
+              <item name="jobmatcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/de/jakobniklas" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.wecodeit.jobmatcher" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/de/jakobniklas" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.wecodeit.jobmatcher.Main" />
+      <module name="jobMatcher-Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.wecodeit.jobmatcher.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bed91f7c-ae55-4843-ba8c-86dbf49f04b4" name="Default Changelist" comment="" />
+      <created>1562578546642</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562578546642</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit, added Main.java, BackendInstance and the Java-Websocket- libary for communication with the api">
+      <created>1562579306603</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1562579306603</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added standart libary for error handling and logging as well as queueing, threadcontrol, formatting and exiting.&#10;&#10;Added abstract class request and requestregistry">
+      <created>1562590312074</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562590312074</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added booleancheck to isText in FormatUtil&#10;&#10;Added API Connection which processes responses using the given requestRegistry">
+      <created>1562656942678</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562656942679</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed APIConnection by calling super(); and adding a port. Testing port is 54345">
+      <created>1562657651501</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562657651501</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed connection errors">
+      <created>1562659593789</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562659593789</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added database libary and database object">
+      <created>1562661702461</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562661702462</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Readded database libary">
+      <created>1562661743640</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1562661743640</updated>
+    </task>
+    <task id="LOCAL-00008" summary="First request to sql from nodeserver">
+      <created>1562768892190</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1562768892190</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added sql querry">
+      <created>1562772531505</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1562772531505</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added convertToUTF8 to FormatUtil">
+      <created>1562828955937</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1562828955937</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed query string encoding">
+      <created>1562831335690</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1562831335690</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added city matching finished json responding">
+      <created>1562847949431</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1562847949431</updated>
+    </task>
+    <task id="LOCAL-00013" summary="cleaned up string formatting">
+      <created>1562848363051</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1562848363051</updated>
+    </task>
+    <task id="LOCAL-00014" summary="readded libaries">
+      <created>1562849686947</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1562849686947</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added employerscores to matching">
+      <created>1562854544072</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1562854544072</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Finalised Matching algorithm">
+      <created>1562859951085</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1562859951086</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1920" height="1113" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.2257721" />
+      <window_info id="Structure" order="1" sideWeight="0.5013369" side_tool="true" weight="0.23375931" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" weight="0.35847208" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39960822" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295063" />
+      <window_info anchor="bottom" id="Statistic" order="7" weight="0.32908913" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946752" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50159746" side_tool="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49946752" weight="0.32908913" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Codota" order="4" weight="0.32960597" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit, added Main.java, BackendInstance and the Java-Websocket- libary for communication with the api" />
+    <MESSAGE value="Added standart libary for error handling and logging as well as queueing, threadcontrol, formatting and exiting.&#10;&#10;Added abstract class request and requestregistry" />
+    <MESSAGE value="Added booleancheck to isText in FormatUtil&#10;&#10;Added API Connection which processes responses using the given requestRegistry" />
+    <MESSAGE value="Fixed APIConnection by calling super(); and adding a port. Testing port is 54345" />
+    <MESSAGE value="Fixed connection errors" />
+    <MESSAGE value="Added database libary and database object" />
+    <MESSAGE value="Readded database libary" />
+    <MESSAGE value="First request to sql from nodeserver" />
+    <MESSAGE value="Added sql querry" />
+    <MESSAGE value="Added convertToUTF8 to FormatUtil" />
+    <MESSAGE value="Fixed query string encoding" />
+    <MESSAGE value="Added city matching finished json responding" />
+    <MESSAGE value="cleaned up string formatting" />
+    <MESSAGE value="readded libaries" />
+    <MESSAGE value="Added employerscores to matching" />
+    <MESSAGE value="Finalised Matching algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalised Matching algorithm" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/BackendInstance.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/ThreadUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="63" column="60" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
+          <folding>
+            <element signature="docComment;class#Queue#0" expanded="true" />
+            <element signature="docComment;field#list#0;class#Queue#0" expanded="true" />
+            <element signature="docComment;method#Queue#0;class#Queue#0" expanded="true" />
+            <element signature="docComment;method#iterate#0;class#Queue#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/Exceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;method#handle#1;class#Exceptions#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/ClassUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/JobMatcherException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding>
+            <element signature="docComment;class#JobMatcherException#0" expanded="true" />
+            <element signature="docComment;field#serialVersionUID#0;class#JobMatcherException#0" expanded="true" />
+            <element signature="docComment;method#JobMatcherException#0;class#JobMatcherException#0" expanded="true" />
+            <element signature="docComment;method#JobMatcherException#1;class#JobMatcherException#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/actions/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="docComment;class#Action#0" expanded="true" />
+            <element signature="docComment;method#perform#0;class#Action#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/ResultSetExtractor.java" />
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/StreamingJsonResultSetExtractor.java" />
+    <entry file="jar://$PROJECT_DIR$/lib/Java-WebSocket-1.4.0-with-dependencies.jar!/org/java_websocket/server/WebSocketServer.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/ResultSetConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;field#logFormat#0;class#Log#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/Java-WebSocket-1.4.0-with-dependencies.jar!/org/java_websocket/drafts/Draft_6455.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="724" selection-start-line="724" selection-end-line="724" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/BackendInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="84" column="65" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+          <folding>
+            <element signature="e#1781#1782#0" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Employer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/APIConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/registry/RequestRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/FormatUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/TimeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="docComment;method#format#0;class#TimeUtil#0" expanded="true" />
+            <element signature="docComment;method#getDate#0;class#TimeUtil#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="docComment;method#getTime#0;class#TimeUtil#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jakobniklas/util/ExitUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/wecodeit/jobmatcher/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>jobMatcher-Backend</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.19736843" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

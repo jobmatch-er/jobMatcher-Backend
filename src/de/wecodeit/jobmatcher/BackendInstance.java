@@ -1,7 +1,6 @@
 package de.wecodeit.jobmatcher;
 
 import de.jakobniklas.util.Exceptions;
-import de.jakobniklas.util.Log;
 import de.wecodeit.jobmatcher.registry.RequestRegistry;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -116,19 +115,15 @@ public class BackendInstance extends Thread
                     Exceptions.handle(e);
                 }
 
-                for(Employer employer : foundEmployers)
-                {
-                    Log.print(employer.getScore() + "; " + employer.getJson());
-                }
-
                 Collections.sort(foundEmployers, Comparator.comparingInt(Employer::getScore));
+                JSONArray output = new JSONArray();
 
                 for(Employer employer : foundEmployers)
                 {
-                    Log.print(employer.getScore() + "; " + employer.getJson());
+                    output.put(new JSONObject(employer.getJson()));
                 }
 
-                return new JSONObject().put("data", "null").put("puid", args.get(1)).toString();
+                return new JSONObject().put("data", output).put("puid", args.get(1)).toString();
             }
         });
 

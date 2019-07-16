@@ -4,6 +4,7 @@ public class Employer
 {
     private String json;
     private int score;
+    private double distanceToUserCity;
 
     public Employer(String json)
     {
@@ -34,5 +35,15 @@ public class Employer
     public void addToScore(int num)
     {
         this.score += num;
+    }
+
+    public double getDistanceToUserCity()
+    {
+        return distanceToUserCity;
+    }
+
+    public void setDistanceToUserCity(double distanceToUserCity)
+    {
+        this.distanceToUserCity = distanceToUserCity;
     }
 }

@@ -81,18 +81,25 @@ public class BackendInstance extends Thread
                         //for each employer in that city
                         for(int j = 0; j < matchingCityEmployers.length(); j++)
                         {
+                            for(int k = 0; k < (((j + 1) * (i + 1)) + 1); k++)
+                            {
+                                foundEmployers.add(new Employer("{}"));
+                            }
+
                             //add every possible employer to list
-                            foundEmployers.add(j * i, new Employer(matchingCityEmployers.getJSONObject(j).toString()));
+                            foundEmployers.set(((j + 1) * (i + 1)), new Employer(matchingCityEmployers.getJSONObject(j).toString()));
+
+                            foundEmployers.get(((j + 1) * (i + 1))).setDistanceToUserCity(nearCities.getJSONObject(i).getDouble("distance"));
 
                             //check if the offered job matches the workarea of the user
-                            if(matchingCityEmployers.getJSONObject(j * i).getInt("workarea") == userToBeMatchedWith.getInt("workarea"))
+                            if(matchingCityEmployers.getJSONObject(j).getInt("workarea") == userToBeMatchedWith.getInt("workarea"))
                             {
                                 //increase employers score
-                                foundEmployers.get(j * i).addToScore(10);
+                                foundEmployers.get((j + 1) * (i + 1)).addToScore(1);
 
                                 //chips of user and employer
                                 JSONArray userChips = new JSONArray(userToBeMatchedWith.getString("chips"));
-                                JSONArray employerchips = new JSONArray(matchingCityEmployers.getJSONObject(j * i).getString("chips"));
+                                JSONArray employerchips = new JSONArray(matchingCityEmployers.getJSONObject(j).getString("chips"));
 
                                 //for each userchip
                                 for(int k = 0; k < userChips.length(); k++)
@@ -102,7 +109,7 @@ public class BackendInstance extends Thread
                                     {
                                         if(userChips.getJSONObject(k).getString("name").equals(employerchips.getJSONObject(l).getString("name")))
                                         {
-                                            foundEmployers.get(j * i).addToScore(1);
+                                            foundEmployers.get((j + 1) * (i + 1)).addToScore(1);
                                         }
                                     }
                                 }
@@ -120,7 +127,15 @@ public class BackendInstance extends Thread
 
                 for(Employer employer : foundEmployers)
                 {
-                    output.put(new JSONObject(employer.getJson()));
+                    if(!employer.getJson().equals("{}"))
+                    {
+                        JSONObject employerJSON = new JSONObject(employer.getJson());
+                        employerJSON.remove("password");
+                        employerJSON.put("score", employer.getScore());
+                        employerJSON.put("distanceToUserCity", employer.getDistanceToUserCity());
+
+                        output.put(employerJSON);
+                    }
                 }
 
                 return new JSONObject().put("data", output).put("puid", args.get(1)).toString();

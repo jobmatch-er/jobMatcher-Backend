@@ -40,7 +40,7 @@ public class APIConnection extends WebSocketServer
         {
             webSocket.close(0, "Another connection is already established");
 
-            Log.print("Connection", "Another connection was tried to be  established, but rejected");
+            Log.print("Connection", "Another connection was tried to be established, but rejected");
         }
     }
 

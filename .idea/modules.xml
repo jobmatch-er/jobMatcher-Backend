@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JobFormatt.er/JobFormatt.er.iml" filepath="$PROJECT_DIR$/JobFormatt.er/JobFormatt.er.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/jobMatcher-Backend.iml" filepath="$PROJECT_DIR$/.idea/jobMatcher-Backend.iml" />
     </modules>
   </component>

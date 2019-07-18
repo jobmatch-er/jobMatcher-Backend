@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="RequestRespond">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/RequestRespond.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

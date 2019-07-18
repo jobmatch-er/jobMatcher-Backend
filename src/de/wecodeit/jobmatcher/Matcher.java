@@ -28,9 +28,13 @@ public class Matcher
 
             int cityLocationCode = -1;
 
+            JSONObject userCity = null;
+
             try
             {
                 cityLocationCode = new JSONObject(getCityResponse).getJSONArray("data").getJSONObject(0).getInt("id");
+
+                userCity = new JSONObject(getCityResponse).getJSONArray("data").getJSONObject(0);
             }
             catch(JSONException e)
             {
@@ -48,7 +52,13 @@ public class Matcher
                 }
             }
 
-            return new JSONObject(getNearByCitiesResponse).getJSONArray("data");
+            JSONArray returnVal = new JSONObject(getNearByCitiesResponse).getJSONArray("data");
+
+            returnVal.put(userCity);
+
+            //Log.print(returnVal.toString());
+
+            return returnVal;
         }
         catch(Exception e)
         {

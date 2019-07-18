@@ -43,10 +43,17 @@ public class BackendInstance extends Thread
                 }
                 catch(SQLException e)
                 {
-                    Exceptions.handle(e);
+                    return "{\"data\": " + e.getMessage() + ", \"puid\": \"" + args.get(1) + "\"}";
                 }
 
-                return "{\"data\": " + queryResult + ", \"puid\": \"" + args.get(1) + "\"}";
+                if(!queryResult.equals(""))
+                {
+                    return "{\"data\": " + queryResult + ", \"puid\": \"" + args.get(1) + "\"}";
+                }
+                else
+                {
+                    return "{\"data\": " + "\"error\"" + ", \"puid\": \"" + args.get(1) + "\"}";
+                }
             }
         });
 
@@ -65,6 +72,8 @@ public class BackendInstance extends Thread
 
                 try
                 {
+                    //Log.print(args.get(0));
+
                     //get user from db
                     JSONObject userToBeMatchedWith = ResultSetConverter.convert(database.executeQuery("SELECT * FROM `user` WHERE `email` = " + args.get(0))).getJSONObject(0);
 
@@ -89,7 +98,14 @@ public class BackendInstance extends Thread
                             //add every possible employer to list
                             foundEmployers.set(((j + 1) * (i + 1)), new Employer(matchingCityEmployers.getJSONObject(j).toString()));
 
-                            foundEmployers.get(((j + 1) * (i + 1))).setDistanceToUserCity(nearCities.getJSONObject(i).getDouble("distance"));
+                            try
+                            {
+                                foundEmployers.get(((j + 1) * (i + 1))).setDistanceToUserCity(nearCities.getJSONObject(i).getDouble("distance"));
+                            }
+                            catch(Exception e)
+                            {
+
+                            }
 
                             //check if the offered job matches the workarea of the user
                             if(matchingCityEmployers.getJSONObject(j).getInt("workarea") == userToBeMatchedWith.getInt("workarea"))
@@ -133,6 +149,15 @@ public class BackendInstance extends Thread
                         employerJSON.remove("password");
                         employerJSON.put("score", employer.getScore());
                         employerJSON.put("distanceToUserCity", employer.getDistanceToUserCity());
+
+                        try
+                        {
+                            employerJSON.put("employer", ResultSetConverter.convert(database.executeQuery("SELECT * FROM `employer_data` WHERE `id` = " + employerJSON.getInt("employerdata"))));
+                        }
+                        catch(SQLException e)
+                        {
+                            Exceptions.handle(e);
+                        }
 
                         output.put(employerJSON);
                     }
